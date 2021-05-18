@@ -10,11 +10,11 @@ export class PrimosComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    let number : number = 11;
+       let number : number = 11;
         console.log( this.verifyNumeberPrimos(number)  );
   }
 
-  verifyNumeberPrimos(numberToVerify: number): string{
+   verifyNumeberPrimos(numberToVerify: number): string{
     if( !Number.isInteger(numberToVerify) 
     || (numberToVerify <= 0)  ) return  numberToVerify +  " no es primo";
 
@@ -23,8 +23,7 @@ export class PrimosComponent implements OnInit {
     return divisores === 2 ? this.setmesage(numberToVerify, 'si') : this.setmesage(numberToVerify, 'no')
   }
 
-
-  setmesage(n: number, msj: string): string{
+   setmesage(n: number, msj: string): string{
     return n + ' ' + msj  + ' es primo'
   }
 
