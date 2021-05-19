@@ -1,0 +1,6 @@
+      <div *ngFor="let number of numbers">
+        <p *ngIf="number % 3 !== 0 && number % 5 !== 0">{{ number }}</p>
+        <p *ngIf="number % 3 == 0 && number % 5 !== 0">{{ number }} fizz</p>
+        <p *ngIf="number % 3 !== 0 && number % 5 == 0">{{ number }} buzz</p>
+        <p *ngIf="number % 3 == 0 && number % 5 == 0">{{ number }} fizzbuzz</p>
+      </div>
