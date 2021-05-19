@@ -13,7 +13,7 @@ export class FizzbuzzComponent implements OnInit {
 
   ngOnInit() {
     this.numbers = this.range( 1, 100, 1 );
-    console.log( this.numbers )
+    console.log( console.log( this.test(15)) )
   }
 
   range(start: number, stop: number, step: number) : number[] {
@@ -23,6 +23,18 @@ export class FizzbuzzComponent implements OnInit {
       a.push(b);
     }
     return a;
+  }
+
+  test(n){
+    let msg = [];
+    for(var i=1;i<=n;i++){
+    if (!(i%3)) msg.push('fizz'); 
+    if (!(i%5)) msg.push('buzz');
+    if ((i%3) == 0 && (i%5) == 0) msg.push('fizzbuzz')
+    else( msg.push(i))
+}
+return msg;
+
   }
 
 }
