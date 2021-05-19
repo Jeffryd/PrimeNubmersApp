@@ -26,14 +26,10 @@ export class FizzbuzzComponent implements OnInit {
   }
 
   test(n){
-    let msg = [];
-    for(var i=1;i<=n;i++){
-    if (!(i%3)) msg.push('fizz'); 
-    if (!(i%5)) msg.push('buzz');
-    if ((i%3) == 0 && (i%5) == 0) msg.push('fizzbuzz')
-    else( msg.push(i))
+for (var i = 1; i <= n; i++) {
+  var f = i % 3 == 0, b = i % 5 == 0;
+  console.log(f ? b ? "FizzBuzz" : "Fizz" : b ? "Buzz" : i);
 }
-return msg;
 
   }
 
