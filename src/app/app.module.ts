@@ -7,10 +7,11 @@ import { HelloComponent } from './hello.component';
 import { PrimosComponent } from './primos/primos.component';
 import { BrujulaComponent } from './brujula/brujula.component';
 import { PascalizeWordsComponent } from './pascalize-words/pascalize-words.component';
+import { FizzbuzzComponent } from './fizzbuzz/fizzbuzz.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, PrimosComponent, BrujulaComponent, PascalizeWordsComponent ],
+  declarations: [ AppComponent, HelloComponent, PrimosComponent, BrujulaComponent, PascalizeWordsComponent, FizzbuzzComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
