@@ -11,8 +11,8 @@ export class PascalizeWordsComponent implements OnInit {
 
   ngOnInit() {
     let oracion = "i like javascript";
-
-    console.log( this.pascalize( oracion ) );
+    let word = "AABBCA";
+    console.log( this.countCharInWord( word ) );
   }
 
   pascalize( words: string ){
@@ -22,4 +22,41 @@ export class PascalizeWordsComponent implements OnInit {
       }).join("")
   }
 
+  countCharInWord(word: string){
+  let count: number;
+  let counts =  word.split('')
+  .reduce((prev, curr)=>{
+    count = prev[curr] ? (prev[curr]+1) : 1;
+    prev[curr] = count;
+    return prev
+  },{});
+  return this.setCountedString(counts);
+  }
+
+  setCountedString(data){
+    let newstring = [];
+    let repeat: number;
+    for(let prop in data){
+      repeat = data[prop];
+      const item = new Array(repeat).fill(`${repeat}${prop}`);
+      newstring = [ ...newstring, ...item[0] ]
+    }
+    return newstring.join('');
+  }
+
+/*
+
+    if(count && curr){
+      console.log( passChar, curr, count)
+    }
+    if(passChar === undefined || passChar !== curr){
+      console.log('entro')
+      passChar = curr;
+      count = undefined;
+    } 
+*/
+
+
 }
+
+
