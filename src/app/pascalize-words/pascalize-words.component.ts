@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-pascalize-words',
-  templateUrl: './pascalize-words.component.html',
+  template: ' dsadf',
   styleUrls: ['./pascalize-words.component.css']
 })
 export class PascalizeWordsComponent implements OnInit {
